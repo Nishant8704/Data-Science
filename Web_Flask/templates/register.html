@@ -7,7 +7,13 @@
 </head>
 <body>
     <h1>NLP App</h1>
+    
     <h3>Register Here </h3>
+
+    <!-- Zinza Tempalate -->
+    {% if message %}
+        <p style = "color:red"> {{ message }} </p>
+    {% endif %}
 
     <form action = "/perform_registration" method ="post">
         <label >Name</label><br>

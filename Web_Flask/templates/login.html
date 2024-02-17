@@ -10,12 +10,17 @@
 
     <h3>Login Here</h3>
 
-    <form>
+    <!-- Zinza Tempalate -->
+    {% if message %}
+        <p style = "color:green"> {{ message }} </p>
+    {% endif %}
+
+    <form action = "/perform_login" method ="post">
         <label>Email</label><br>
-        <input type = "email"><br>
+        <input type = "email" name="user_ka_email"><br>
         <label>Password</label><br>
-        <input type = "password"><br><br>
-        <input type = "Submit" value = "login">
+        <input type = "password" name = "user_ka_password"><br><br>
+        <input type = "Submit" value = "Login">
     </form>
     <p>Not a Member? <a href="/register">Register Here</a></p>
 
